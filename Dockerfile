@@ -8,8 +8,7 @@ RUN apt-get update && \
 	mkvtoolnix \
 	&& apt-get clean
 
-VOLUME /share
-
+# Set up local user to run as
 RUN useradd -u 1000 -ms /bin/bash docker
 USER docker
 ENV HOME /home/docker
